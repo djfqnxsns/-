@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Playground Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="startScreen">
+    <h1>げんじぶ 曲</h1>
+    <p id="songCount"></p>
+    <button onclick="startGame()">START</button>
+</div>
+
+<div id="gameScreen" style="display:none;">
+    <div id="roundInfo"></div>
+    <h2>더 좋아하는 곡을 선택하세요</h2>
+
+    <div class="battle">
+
+        <button id="leftCard" onclick="selectSong(0)">
+      <div id="leftTitle"></div>
+      <small id="leftSub"></small>
+    </button>
+
+        <div class="vs">VS</div>
+
+        <button id="rightCard" onclick="selectSong(1)">
+      <div id="rightTitle"></div>
+      <small id="rightSub"></small>
+    </button>
+
+    </div>
+</div>
+
+<div id="resultScreen" style="display:none;">
+    <h1>🏆 げんじぶ 曲</h1>
+    <p>FINAL RANKING</p>
+
+    <div id="ranking"></div>
+
+    <button onclick="startGame()">다시 하기</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
